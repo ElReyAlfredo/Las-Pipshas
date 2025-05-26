@@ -48,7 +48,9 @@ function CreateOrder() {
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
           <label className="sm:basis-40">First Name</label>
           <input
-            className="input grow"
+            className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg w-64 md:w-80 
+                       focus:outline-none focus:ring-2 focus:ring-orange-300 focus:bg-white
+                       placeholder-gray-500 text-gray-700 shadow-sm"
             type="text"
             name="customer"
             defaultValue={username}
@@ -59,7 +61,14 @@ function CreateOrder() {
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
           <label className="sm:basis-40">Phone number</label>
           <div className="grow">
-            <input className="input w-full" type="tel" name="phone" required />
+            <input
+              className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg w-64 md:w-80 
+                       focus:outline-none focus:ring-2 focus:ring-orange-300 focus:bg-white
+                       placeholder-gray-500 text-gray-700 shadow-sm"
+              type="tel"
+              name="phone"
+              required
+            />
             {formErrors?.phone && (
               <p className="mt-2 rounded-md bg-red-100 p-2 text-xs text-red-700">
                 {formErrors.phone}
@@ -72,7 +81,9 @@ function CreateOrder() {
           <label className="sm:basis-40">Address</label>
           <div className="grow">
             <input
-              className="input w-full"
+              className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg w-64 md:w-80 
+                       focus:outline-none focus:ring-2 focus:ring-orange-300 focus:bg-white
+                       placeholder-gray-500 text-gray-700 shadow-sm"
               type="text"
               name="address"
               disabled={isLoadingAddress}
@@ -104,7 +115,7 @@ function CreateOrder() {
 
         <div className="mb-12 flex items-center gap-5">
           <input
-            className="h-6 w-6 accent-yellow-400 focus:outline-none focus:ring focus:ring-yellow-400 focus:ring-offset-2"
+            className="h-6 w-6 accent-orange-500 focus:outline-none focus:ring focus:ring-orange-400 focus:ring-offset-2"
             type="checkbox"
             name="priority"
             id="priority"

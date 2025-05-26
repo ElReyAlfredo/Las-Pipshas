@@ -5,14 +5,21 @@ import Username from "../features/user/Username";
 
 function Header() {
   return (
-    <header className="flex items-center justify-between bg-yellow-500 px-4 py-3 uppercase border-b border-stone-500 sm:px-6">
-      <Link to="/" className="tracking-widest">
-        LAS PIPSHAS
-      </Link>
+    <div className="bg-gradient-to-br from-orange-100 to-orange-50">
+      <header className="bg-gradient-to-r from-orange-400 to-orange-500 px-6 py-4 shadow-lg">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <Link
+            to="/"
+            className="text-white text-2xl md:text-3xl font-bold tracking-wide"
+          >
+            LAS PIPSHAS
+          </Link>
 
-      <SearchOrder />
-      <Username />
-    </header>
+          <SearchOrder />
+          <Username />
+        </div>
+      </header>
+    </div>
   );
 }
 
